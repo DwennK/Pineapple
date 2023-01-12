@@ -27,7 +27,7 @@ response = getPhones()
 
 
 # Write JSON response to a file
-with open("response.json", "w") as outfile:
+with open("./STOCK/response.json", "w") as outfile:
     json.dump(response.text, outfile)
 
 # Load the JSON data
@@ -41,4 +41,4 @@ df = pd.json_normalize(
     )
 
 # Export the DataFrame to a CSV file
-df.to_csv("output.csv", index=False)
+df.to_csv("./STOCK/output.csv", index=False)
