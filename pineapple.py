@@ -3,6 +3,8 @@ from config import api_secret
 import pprint
 import requests
 import os
+import pandas as pd
+import json
 
 #Clear the console
 os.system('cls')
@@ -22,4 +24,19 @@ def getPhones():
     return response
 
 response = getPhones()
-pprint.pprint(response.text)
+# Write JSON response to a file
+with open("result.json", "w") as outfile:
+    json.dump(response.text, outfile)
+
+
+# Load the JSON data
+json_data = json.loads(response.text)
+
+# Convert the JSON data to a DataFrame
+df = pd.json_normalize(json_data)
+
+# Export the DataFrame to a CSV file
+df.to_csv("output.csv", index=False)
+
+
+
