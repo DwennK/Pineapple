@@ -31,16 +31,22 @@ def getPhones():
 # Call getPhones function
 response = getPhones()
 
-# Deserialize the JSON data
-df = pd.read_json(response.text)
+def createCSV():
+    # Deserialize the JSON data
+    df = pd.read_json(response.text)
 
-# Extract key-value from Dimension
-df["Color"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Color"), None)["Value"])
-df["Cloud Lock"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Cloud Lock"), None)["Value"])
-df["Appearance"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Appearance"), None)["Value"])
-df["Functionality"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Functionality"), None)["Value"])
-df["Boxed"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Boxed"), None)["Value"])
+    # Extract key-value from Dimension
+    df["Color"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Color"), None)["Value"])
+    df["Cloud Lock"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Cloud Lock"), None)["Value"])
+    df["Appearance"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Appearance"), None)["Value"])
+    df["Functionality"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Functionality"), None)["Value"])
+    df["Boxed"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Boxed"), None)["Value"])
 
-df.drop("Dimension", axis=1, inplace=True)
-# Write the data to a CSV file
-df.to_csv('./STOCK/output.csv', index=False)
+    # We extraced all values needed from "Dimension", now we can remove this
+    df.drop("Dimension", axis=1, inplace=True)
+
+    # Write the data to a CSV file
+    df.to_csv('./STOCK/output.csv', index=False)
+
+# Call the function to create CSV
+createCSV()
