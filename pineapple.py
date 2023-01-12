@@ -24,19 +24,21 @@ def getPhones():
     return response
 
 response = getPhones()
-# Write JSON response to a file
-with open("result.json", "w") as outfile:
-    json.dump(response.text, outfile)
 
+
+# Write JSON response to a file
+with open("response.json", "w") as outfile:
+    json.dump(response.text, outfile)
 
 # Load the JSON data
 json_data = json.loads(response.text)
 
 # Convert the JSON data to a DataFrame
-df = pd.json_normalize(json_data)
+df = pd.json_normalize(
+    json_data, 
+    record_path=['Dimension'],
+    meta=['ProductName', 'ItemVariantId', 'Quantity', 'Price', ['Dimension']]
+    )
 
 # Export the DataFrame to a CSV file
 df.to_csv("output.csv", index=False)
-
-
-
