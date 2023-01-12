@@ -1,18 +1,25 @@
 #Get API key stored in the config.py file (that file is included in the .gitignore)
 from config import api_secret
-
+import pprint
 import requests
+import os
 
-url = "https://foxway.shop/api/v1/catalogs/working/pricelist"
+#Clear the console
+os.system('cls')
 
-querystring = {"dimensionGroupId":"1","itemGroupId":"1","vatMargin":"true"}
+def getPhones():
+    url = "https://foxway.shop/api/v1/catalogs/working/pricelist"
 
-payload = ""
-headers = {
-    "accept": "text/json",
-    "X-ApiKey": api_secret
-}
+    querystring = {"dimensionGroupId":"1","itemGroupId":"1","vatMargin":"true"}
 
-response = requests.request("GET", url, data=payload, headers=headers, params=querystring)
+    payload = ""
+    headers = {
+        "accept": "text/json",
+        "X-ApiKey": api_secret
+    }
 
-print(response.text)
+    response = requests.request("GET", url, data=payload, headers=headers, params=querystring)
+    return response
+
+response = getPhones()
+pprint.pprint(response.text)
