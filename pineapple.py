@@ -30,15 +30,16 @@ response = getPhones()
 with open("./STOCK/response.json", "w") as outfile:
     json.dump(response.text, outfile)
 
-# Load the JSON data
-json_data = json.loads(response.text)
+# Deserialize the JSON data
+df = pd.read_json(response.text)
 
-# Convert the JSON data to a DataFrame
-df = pd.json_normalize(
-    json_data, 
-    record_path=['Dimension'],
-    meta=['ProductName', 'ItemVariantId', 'Quantity', 'Price', ['Dimension']]
-    )
+# Extract key-value from Dimension
+df["Color"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Color"), None)["Value"])
+df["Cloud Lock"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Cloud Lock"), None)["Value"])
+df["Appearance"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Appearance"), None)["Value"])
+df["Functionality"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Functionality"), None)["Value"])
+df["Boxed"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Boxed"), None)["Value"])
 
-# Export the DataFrame to a CSV file
-df.to_csv("./STOCK/output.csv", index=False)
+df.drop("Dimension", axis=1, inplace=True)
+# Write the data to a CSV file
+df.to_csv('./STOCK/output.csv', index=False)
