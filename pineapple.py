@@ -1,6 +1,5 @@
 #Get API key stored in the config.py file (that file is included in the .gitignore)
 from config import api_secret
-import pprint
 import requests
 import os
 import pandas as pd
@@ -23,6 +22,7 @@ def getPhones():
     response = requests.request("GET", url, data=payload, headers=headers, params=querystring)
     return response
 
+# Call getPhones function
 response = getPhones()
 
 
