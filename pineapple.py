@@ -20,15 +20,16 @@ def getPhones():
     }
 
     response = requests.request("GET", url, data=payload, headers=headers, params=querystring)
+
+    # Write JSON response to a file
+    with open("./STOCK/response.json", "w") as outfile:
+        json.dump(response.text, outfile)
+
+    # End of the function
     return response
 
 # Call getPhones function
 response = getPhones()
-
-
-# Write JSON response to a file
-with open("./STOCK/response.json", "w") as outfile:
-    json.dump(response.text, outfile)
 
 # Deserialize the JSON data
 df = pd.read_json(response.text)
