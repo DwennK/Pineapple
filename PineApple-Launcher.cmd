@@ -1,2 +1,1 @@
-py ./pineapple.py
-pause
+START /MAX "PineApple" py ./pineapple.py
