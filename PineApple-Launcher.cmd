@@ -1,0 +1,2 @@
+py ./pineapple.py
+pause
