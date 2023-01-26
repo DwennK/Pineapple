@@ -1,5 +1,9 @@
+# Sotck Folder
+STOCK/
+
 #API KEYS
 config.py
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
