@@ -83,7 +83,7 @@ def createCSV():
     df["Functionality"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Functionality"), None)["Value"])
     df["Boxed"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Boxed"), None)["Value"])
 
-    # We extraced all values needed from "Dimension", now we can remove this
+    # We extracted all values needed from "Dimension", now we can remove this
     df.drop("Dimension", axis=1, inplace=True)
 
     # Write the data to a CSV file
@@ -95,7 +95,7 @@ def createCSV():
 createCSV()
 
 #Sleep for X seconds then quit
-print("------------------------------------------------------------------------------")
+print("------------------------------------------------------------------------------------------")
 def countdown(time_sec):
     while time_sec:
         mins, secs = divmod(time_sec, 60)

@@ -1,1 +1,1 @@
-START /MAX "PineApple" py ./pineapple.py
+START /MAX "PineApple - Get Stock from Foxway.shop to a CSV" py ./pineapple.py
