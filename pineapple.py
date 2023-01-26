@@ -85,7 +85,7 @@ def createCSV():
     df.to_csv('./STOCK/output.csv', index=False)
 
 # Call the function to create CSV
-#Get API key stored in the config.py file (that file is included in the .gitignore)
+#Get API key stored in the config.py file (that file is included in the .gitignore )
 from config import api_secret
 import requests
 import os
