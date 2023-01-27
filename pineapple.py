@@ -5,9 +5,23 @@ import requests
 import os
 import pandas as pd
 import json
+import logging
 
 #Clear the console
 os.system('cls')
+
+#We set a folder to work with
+chemin = os.path.dirname(os.path.realpath(__file__))
+
+# Configure Logging
+logging.basicConfig(filename=chemin+"/log/log.txt", level=logging.DEBUG,
+                    format="%(asctime)s %(message)s", filemode="a")
+logging.debug("Program Launched")
+# logging.debug("Debug logging test...")
+# logging.info("Program is working as expected")
+# logging.warning("Warning, the program may not function properly")
+# logging.error("The program encountered an error")
+# logging.critical("The program crashed")
 
 
 print(

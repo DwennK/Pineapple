@@ -1,0 +1,3 @@
+2023-01-27 11:16:06,309 Program Launched
+2023-01-27 11:16:06,325 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-27 11:16:07,566 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
