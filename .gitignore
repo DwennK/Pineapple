@@ -3,6 +3,7 @@ config.py
 
 # Ignore content of folders
 **/logs/*
+/log/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
