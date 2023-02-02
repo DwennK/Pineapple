@@ -1,3 +1,33 @@
 2023-01-27 11:16:06,309 Program Launched
 2023-01-27 11:16:06,325 Starting new HTTPS connection (1): foxway.shop:443
 2023-01-27 11:16:07,566 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-01-27 11:51:52,504 Program Launched
+2023-01-27 11:51:52,504 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-27 11:51:53,683 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-01-27 11:52:02,470 Program Launched
+2023-01-27 11:52:02,485 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-27 11:52:02,845 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-01-27 18:24:10,972 Program Launched
+2023-01-27 18:24:10,972 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-27 18:24:12,260 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-01-30 11:13:59,290 Program Launched
+2023-01-30 11:13:59,290 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-30 11:14:00,644 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-01-30 11:14:11,401 Program Launched
+2023-01-30 11:14:11,401 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-30 11:14:11,716 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-01-30 14:19:44,772 Program Launched
+2023-01-30 14:19:44,772 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-30 14:19:47,377 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-01-30 18:41:56,249 Program Launched
+2023-01-30 18:41:56,249 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-30 18:41:58,401 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-01-31 13:36:07,024 Program Launched
+2023-01-31 13:36:07,024 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-31 13:36:08,619 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-01-31 13:36:25,253 Program Launched
+2023-01-31 13:36:25,253 Starting new HTTPS connection (1): foxway.shop:443
+2023-01-31 13:36:25,535 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
+2023-02-02 15:57:08,692 Program Launched
+2023-02-02 15:57:08,692 Starting new HTTPS connection (1): foxway.shop:443
+2023-02-02 15:57:10,361 https://foxway.shop:443 "GET /api/v1/catalogs/working/pricelist?dimensionGroupId=1&itemGroupId=1&vatMargin=true HTTP/1.1" 200 None
