@@ -56,7 +56,6 @@ print(
 ⠀⠀⠈⠳⣄⠀⠀⠀⠙⣲⠺⢥⣀⠀⠀⠀⠀⢠⡴⠋⠉⠓⠢⢤⣠⡾⠃⠀⠀
 ⠀⠀⠀⠀⠈⠳⣤⠖⠋⠀⠀⠀⠉⠓⢤⣠⠞⠁⠀⠀⠀⠀⢀⣠⠟⠁⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠈⠙⠲⠶⠤⠤⣄⣀⣼⣁⣀⣀⣠⠤⠶⠋⠉⠀⠀⠀⠀⠀⠀
-    
     ''')
 
 def getPhones():
@@ -98,7 +97,7 @@ def createCSV():
     df["Boxed"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Boxed"), None)["Value"])
 
     # We extracted all values needed from "Dimension", now we can remove this
-    df.drop("Dimension", axis=1, inplace=True)
+    #df.drop("Dimension", axis=1, inplace=True)
 
     # Write the data to a CSV file
     df.to_csv('./STOCK/output.csv', index=False)
