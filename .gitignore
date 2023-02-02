@@ -1,6 +1,8 @@
 #API KEYS
 config.py
 
+# Ignore content of folders
+**/logs/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
