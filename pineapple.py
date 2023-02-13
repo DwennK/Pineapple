@@ -89,6 +89,9 @@ def createCSV():
     # Deserialize the JSON data
     df = pd.read_json(response.text)
 
+    # Quantity = 0 on items where Price is 0. / If Price = 0, quantity = 0
+    df.loc[df['Price'] <= 0, 'Quantity'] = 0
+
     # Extract key-value from Dimension
     df["Color"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Color"), None)["Value"])
     df["Cloud Lock"] = df["Dimension"].apply(lambda x: next((item for item in x if item["Key"] == "Cloud Lock"), None)["Value"])
